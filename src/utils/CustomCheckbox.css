@@ -1,0 +1,33 @@
+.checkbox label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.checkbox label::before, .checkbox label::after {
+  content: '';
+  display: inline-block;
+}
+
+.checkbox label::before {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid #f05719;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::before {
+  background: #f05719;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::after {
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 10px;
+  height: 6px;
+  border-bottom: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+  rotate: -45deg;
+}
